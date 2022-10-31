@@ -1,21 +1,23 @@
 :root {
    --primary-color: rgb(112, 7, 7);
    --secondary-color: grey;
-   --main-font-family: 'Open Sans', sans-serif;
+   --text-font-family: 'Roboto', sans-serif;
+
+ }
+ .main__game {
+   font-family: var(--text-font-family);
  }
 
  .game__title {
    color: var(--secondary-color);
-   letter-spacing: 4px;
-   margin-bottom: 10px;
+   margin-bottom: 15px;
    font-weight: 600;
  }
 
  .game__title2 {
    color: var(--primary-color);
-   margin-bottom: 30px;
-   font-weight: 800;
-   letter-spacing: 2px;
+   margin-bottom: 20px;
+   font-weight: 700;
  }
 
  .game__text--1 {
@@ -23,6 +25,24 @@
    margin-bottom: 20px;
  }
  .game__text--2 {
-   color: var(--secondary-color);
    margin-bottom: 20px;
+   font-weight: 900;
+ }
+ .btn {
+   background-color: var(--primary-color);
+   color: white;
+   width: 100px;
+   height: 40px;
+   border-radius: 5px;
+   border: none;
+ }
+
+ .game__subtitle{
+   background-color: var(--primary-color);
+   width: 400px;
+   height: 40px;
+   text-align: center;
+   color: white;
+   border-radius: 5px;
+   
  }
