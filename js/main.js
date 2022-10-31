@@ -1,59 +1,74 @@
 'use strict';
-/*### ¿Qué tenemos que hacer antes de empezar a programar?
-
-1. Tener nuestra lista de tareas. *
-2. Clonar el repositorio.*
-3. Leer bien el enunciado y preguntar las dudas.*
-4. Crear el HTML.*
-5. Crear el CSS mínimo y necesario (no es prioritario). 
-6. JS: crear las constantes (`document.querySelector).*
-7. Escuchar evento sobre el botón. *
-1er proceso -- Al iniciar el juego el ordenador generará de manera aleatoria un integrante del ejército del mal, entre los cinco disponibles
-2do proceso -- Al dar clic a "Batalla" aparece en pantalla el resultado de la batalla, para esto compara el valor de cada raza y gana la raza de mayor valor.
-3er proceso -- Comparar el valor de la raza que la jugadora ha seleccionado con la raza aleatoria y pintar el resultado correspondientes en la pantalla. */
 
 //CONSTANTES 
 const select = document.querySelector('.js-select');
 const btn = document.querySelector('.js-btn');
 const subtitle = document.querySelector('.js-subtitle');
 
+//Razas malvadas 
+const random = 0;
+const raceSureñosMalos = 2;
+const raceOrcos = 2;
+const raceGoblins = 2;
+const raceHuargos = 3;
+const raceTrolls = 5;
+
 //FUNCIONES
 
+//Función número random al entrar en la página 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
     }
 
-function evilRace (){
-    const race1 = 'Sureños malos';
-    const race2 = 'Orcos';
-    const race3 = 'Goblins';
-    const race4 = 'Huargos';
-    const race5 = 'Trolls';
-}
+//Función que recoge el valor del select
+function userChoice(){
+    const selectValue = parseInt(select.value);
+    return selectValue;
+    }
 
+
+//Función que asocia el número random a la raza
 const chooseEvilRace = () => { 
-    const randomNumber = getRandomNumber(6); 
+    const randomNumber = getRandomNumber(5); 
     console.log(randomNumber); 
     if(randomNumber === 1){
-        
-        
+         raceSureñosMalos;
+
     } else if (randomNumber === 2) {
+         raceOrcos;
 
     } else if (randomNumber === 3) {
+         raceGoblins;
 
     } else if (randomNumber === 4) {
+         raceHuargos;
 
     } else if (randomNumber === 5) {
-
+         raceTrolls
     }
 };
 
+//función batalla
+
+function compareResult(){
+    if (userChoice < chooseEvilRace){
+        subtitle.innerHTML = '¡Ha ganado el Ejército del Mal! Vuelve a Intentarlo.';
+    }else if (userChoice === chooseEvilRace){
+        subtitle.innerHTML = 'Empate';
+    }else{
+        subtitle.innerHTML = '¡Ha ganado el Ejército del Bien! Enhorabuena.';
+    }
+}
+
+
+//Función manejadora 
 
 function handleClick(e){ 
     e.preventDefault(); 
+    userChoice();
     chooseEvilRace ();
+    compareResult()
 };
-
 
 //EVENTOS
 btn.addEventListener('click',handleClick);
