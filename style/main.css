@@ -1,0 +1,28 @@
+:root {
+   --primary-color: rgb(112, 7, 7);
+   --secondary-color: grey;
+   --main-font-family: 'Open Sans', sans-serif;
+ }
+
+ .game__title {
+   color: var(--secondary-color);
+   letter-spacing: 4px;
+   margin-bottom: 10px;
+   font-weight: 600;
+ }
+
+ .game__title2 {
+   color: var(--primary-color);
+   margin-bottom: 30px;
+   font-weight: 800;
+   letter-spacing: 2px;
+ }
+
+ .game__text--1 {
+   color: var(--secondary-color);
+   margin-bottom: 20px;
+ }
+ .game__text--2 {
+   color: var(--secondary-color);
+   margin-bottom: 20px;
+ }

@@ -32,41 +32,42 @@ const chooseEvilRace = () => {
     const randomNumber = getRandomNumber(5); 
     console.log(randomNumber); 
     if(randomNumber === 1){
-         raceSureñosMalos;
+         return raceSureñosMalos;
 
     } else if (randomNumber === 2) {
-         raceOrcos;
+        return raceOrcos;
 
     } else if (randomNumber === 3) {
-         raceGoblins;
+        return raceGoblins;
 
     } else if (randomNumber === 4) {
-         raceHuargos;
+        return raceHuargos;
 
     } else if (randomNumber === 5) {
-         raceTrolls
+        return raceTrolls
     }
 };
 
 //función batalla
-
 function compareResult(){
-    if (userChoice < chooseEvilRace){
+    const evilValue = chooseEvilRace();
+    const userValue = userChoice(); 
+    if (userValue < evilValue){
         subtitle.innerHTML = '¡Ha ganado el Ejército del Mal! Vuelve a Intentarlo.';
-    }else if (userChoice === chooseEvilRace){
+    }else if (userValue === evilValue){
         subtitle.innerHTML = 'Empate';
     }else{
         subtitle.innerHTML = '¡Ha ganado el Ejército del Bien! Enhorabuena.';
     }
+    console.log(evilValue,userValue);
 }
+
 
 
 //Función manejadora 
 
 function handleClick(e){ 
     e.preventDefault(); 
-    userChoice();
-    chooseEvilRace ();
     compareResult()
 };
 
