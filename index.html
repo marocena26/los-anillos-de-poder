@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./style/main.css">
     <title>Los anillos de poder</title>
 </head>
-<body>
-    <aside class="photoLord"></aside>
+<body class="body">
     <main class="main__game">
-        <h1 class="game__title">Juego</h1>
-        <h2 class="game__title2">Los anillos de poder</h2>
-        <p class="game__text--1">¡La Tierra Media está en guerra! En ella lucharán razas leales a Sauron contra otras bondadosas que no quieren que el mal reine sobre sus tierras.</p>
-        <p class="game__text--2">Eres un jugador del ejercito del bien, no olvides tu misión de ganar la batalla.</p>
-        <form action=>
-            <select name="" id="" class="js-select">
-                <option value="">Selecciones la raza con que vas a jugar</option>
-                <option value="1">Pelosos</option>
-                <option value="2">Sureños buenos</option>
-                <option value="3">Enanos</option>
-                <option value="4">Númenóreanos</option>
-                <option value="5">Elfos</option>
-            </select>
-            <button class="js-btn btn">Batalla</button>
-        </form>
-        <h2 class="js-subtitle game__subtitle">¡Comienza la batalla!</h2>
+    
+        <section class="photoLord"></section>
+
+        <section class="wrap__game">
+
+            <h1 class="game__title">Juego</h1>
+            <h2 class="game__title2">Los anillos de poder</h2>
+            <p class="game__text--1">¡La Tierra Media está en guerra! En ella lucharán razas leales a Sauron contra otras bondadosas que no quieren que el mal reine sobre sus tierras.</p>
+            <p class="game__text--2">Eres un jugador del ejercito del bien, no olvides tu misión de ganar la batalla.</p>
+
+            <form>
+                <select name="" id="" class="js-select select">
+                    <option value="0" selected>Selecciones la raza con que vas a jugar</option>
+                    <option value="1">Pelosos</option>
+                    <option value="2">Sureños buenos</option>
+                    <option value="3">Enanos</option>
+                    <option value="4">Númenóreanos</option>
+                    <option value="5">Elfos</option>
+                </select>
+                <button class="js-btn btn">Batalla</button>
+                <button class="js-btn--restart btn hidden">Reiniciar juego</button> 
+            </form>
+
+            <h2 class="js-subtitle game__subtitle">¡Comienza la batalla!</h2>
+            <h3 class="score">Puntuaciones</h3>
+
+            <section class="wrap-score">
+                <p class="js-player">Jugador: 0</p>
+                <p class="js-pc">Computadora: 0</p>
+            </section>
+
+        </section>
+
     </main>
 
     <script src="./js/main.js"></script>
