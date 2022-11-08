@@ -73,18 +73,18 @@ function completeGame (){
     if (scoreTotal === 10){
         btn.classList.add("hidden"); //oculta el botón normal 
         btnRestart.classList.remove("hidden"); //muestra el botón de reset
-    }
-
+    
     if (pointsPlayer < pointsPc) { //condicional. si los puntos del jugador son menores que los del pc
         subtitle.innerHTML = '¡La computadora ha ganado la partida!';
-    }
+        }
     
     else if (pointsPlayer === pointsPc){ //condicional. si los puntos del jugador son iguales que los del pc
         subtitle.innerHTML = 'Empate';
-    }
+        }
     
     else { //condicional. si los puntos del jugador son mayores que los del pc
         subtitle.innerHTML = '¡Has ganado la partida!';
+        }
     }
 };
 
