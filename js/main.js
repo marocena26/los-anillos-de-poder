@@ -93,8 +93,17 @@ function completeGame (){
 
 function handleClick(e){ 
     e.preventDefault(); 
+    const pointsPlayer = parseInt(select.value);
+    if (pointsPlayer === 0) { //condicional. si los puntos del jugador son menores que los del pc
+        subtitle.innerHTML = '¡Seleccione una raza, por favor!';
+        }
+
+    else { //condicional. si los puntos del jugador son mayores que los del pc
+        subtitle.innerHTML = '¡Has ganado la partida!';
+        
     compareResult();
     completeGame ();
+    }
 };
 
 
