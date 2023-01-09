@@ -1,85 +1,68 @@
-# Módulo 2: Ejercicio de evaluación intermedia
+# los-anillos-de-poder
 
-Trabajo realizado por la alumna María Elena Arocena López durante la evaluación intermedia del Módulo 2: JS. 
+## 🚀 Introduction
 
-## Enunciado
-El ejercicio consiste en desarrollar un juego de "LOS ANILLOS DE PODER" usando JavaScript. 
-Antes de empezar, tenéis que crear un nuevo repositorio en GitHub desde GitHub Classroom usando este enlace. Una vez creado, lo clonaremos en nuestro ordenador y en la carpeta creada empezaremos a trabajar en el ejercicio.
+In this repository you can find the files generated in the **mid evaluation of Module 2 - JS** within **[Adalab](https://adalab.es/)'s Web Development Bootcamp - Promo Radia**.
 
-> **NOTA:** No hace falta usar el Starter kit de Adalab.
+The main objective is to develop a **Small battle game** set in Middle-earth "Los anillos de poder". The main **requirement** is that **JavaScript** is used for **development**.
 
-## Descripción
+> **NOTE:** Direct link to the project by clicking on the following **[link](https://marocena26.github.io/los-anillos-de-poder/)**.
 
-¡La Tierra Media está en guerra! En ella lucharán razas leales a Sauron contra otras bondadosas que no quieren que el mal reine sobre sus tierras.
+## 📝 Requirements
 
-Cada raza tiene asociado una fuerza entre 1 y 5:
+With a **[Adalab](https://adalab.es/)'s design** as the starter point, the exercise consists on developing a web-site using the following **elements**:
 
-- **Razas bondadosas:**
-    - Raza 1: Pelosos con fuerza (1),
-    - Raza 2: Sureños buenos con fuerza (2),
-    - Raza 3: Enanos con fuerza (3),
-    - Raza 4: Númenóreanos con fuerza (4),
-    - Raza 5: Elfos con fuerza (5).
-    
-- **Razas malvadas:**
-    - Raza 1: Sureños malos con fuerza (2),
-    - Raza 2: Orcos con fuerza (2),
-    - Raza 3: Goblins con fuerza (2),
-    - Raza 4: Huargos con fuerza (3),
-    - Raza 5: Trolls con fuerza(5).
-    
-Crea un programa que calcule el resultado de la batalla entre los 2 tipos de razas:
+- **JS**
 
-- El resultado puede ser que gane el bien, el mal, o exista un empate. Dependiendo del valor de la raza en la lucha.
-- El usuario jugará el rol de una raza del ejército del bien y el ordenador el rol de una raza del ejército del mal.
+The following **requirements** have to be respected:
 
-## Indicaciones
+1. When **starting the game**, a drop-down is displayed for the user to **select the member** of the army of the good she **wishes to play with**.
+2. At the **start of the game** the **computer will randomly generate a member of the army of evil** from the five available.
+3. When **clicking on "Battle"**, the **result** of the battle **appears on the screen** the race with the highest value wins.
+4. Underneath, the **following texts appear** in the next section:
+    - When the page **starts**: **The battle begins**.
+    - When the **player** enters a race **higher than the random race** and clicks on Battle: **The Army of Good! Congratulations**.
+    - When the **player** enters a race **smaller than the random race** and clicks on Battle: **The Army of Evil has won! Try Again**.
+    - When the **player** enters a race **equal** to the random race and clicks on Battle: **Tie**.
 
-![image](https://user-images.githubusercontent.com/113302094/200696160-dd22447e-be47-4113-a077-a4b7e5cd1494.png)
+To make the game we have to perform the following functionalities from JavaScript:
+- Create a minimal layout with the select, the button and the space for the result.
+- Generate five random numbers between 1 and 6 for the member of the army el mal, with the help of `Math.random` and `Math.ceil`. 
+- Compare the value of the race that the player has selected with the random race and paint the corresponding corresponding result on the screen.
 
-- Al iniciar el juego se muestra un desplegable para la usuaria seleccione el integrante del ejército del bien con quien desea jugar.
-- Al iniciar el juego el ordenador generará de manera aleatoria un integrante del ejército del mal, entre los cinco disponibles.
-- Al dar clic a "Batalla" aparece en pantalla el resultado de la batalla, para esto compara el valor de cada raza y gana la raza de mayor valor.
-- Debajo, en el siguiente apartado aparecen los siguientes textos:
-    - Al arrancar la página: Comienza la batalla.
-    Cuando la jugadora introduzca una raza mayor que la raza aleatoria y pulse en Batalla: **¡Ha ganado el Ejército del Mal! Vuelve a Intentarlo**.
-    Cuando la jugadora introduzca una raza menor que la raza aleatoria y pulse en Batalla: **¡Ha ganado el Ejército del Bien! Enhorabuena**.
-    Cuando la jugadora introduzca una raza igual que la raza aleatoria y pulse en Batalla: **Empate**.
+#### Bonus
 
-## Pasos para realizar el juego
+The game also has the following **functionalities**:
+- The **points** for each player should **appear at the bottom**. 
+- The **game ends when it reaches 10 moves**, add the necessary code to display a Reset Game button to restart the game when this condition is met and the Play button disappears.
+- When we **click on the Restart Game button**, this **button disappears**, reset all the **counters to zero** and the and the **Play button reappears**.
+- When the **game ends**, it **shows who has won the game**: the computer or the user.
 
-Para realizar el juego tenemos que realizar las siguientes funcionalidades desde JavaScript:
+## 🛠️ Tools
 
-1. Crear una maquetación mínima con el select, el botón y el espacio para el resultado.
-2. Generar cinco números aleatorios entre 1 y 6 para el integrante del ejército el mal, con la ayuda de ```Math.random```  y ```Math.ceil```. Puedes usar la siguiente función, copia estas 3 líneas de código en vuestro JS y **no las modifiquéis**:
-    
-```bash
-function getRandomNumber(max) {
-return Math.ceil(Math.random() * max);
-}
+The following tools have been used when solving the project:
 
-```
-3. Comparar el valor de la raza que la jugadora ha seleccionado con la raza aleatoria y pintar el resultado correspondientes en la pantalla.
-Según vayas trabajando en el ejercicio, haz nuevas versiones del mismo y sube los cambios a GitHub. De esta forma podremos ver cómo vas avanzando. También publica el resultado usando GitHub Pages (recuerda configurarlo en las preferencias del proyecto) y pon el enlace a GitHub Pages en la descripción del repositorio.
+- **HTML** (with partials for an easier lecture and project organization)
+- **CSS Flexbox**
+- **GIT version control**
+- **JS**
 
-## Bonus
+## 💾 Steps to follow to use this project on your computer:
 
-Si te queda tiempo y quieres completar las funcionalidades del juego, puedes hacer lo siguiente:
+1. Click on the top right corner > **Fork**.
+2. It will ask you to choose which GitHub user you want to fork it to. **Choose your user**.
+3. **Go to github.com/your-user/name-of-project**, **clone it** and do whatever you want, you can rename the repo, change the code, redeploy it to GitHub Pages...
+4. **Finally** and for everything to work properly, **you must disable GitHub Pages and re-enable** it so that GitHub generates the new URL correctly.
 
-- En la parte inferior debe aparecer los puntos de cada jugadora. Agrega el código necesario para contar los puntos del jugador y del ordenador.
-- El juego finaliza cuando llega a 10 movimientos, agrega el código necesario para que se muestre un botón **Reiniciar Juego** que vuelva a iniciar el juego cuando se cumpla esta condición y desaparezca el botón de **Jugar**.
-- Cuando le demos click a al botón **Reiniciar Juego** desaparece este botón, poner todos los contadores a cero y vuelve a aparecer el botón **Jugar**.
-- Cuando finalice el juego, muestra quién ha ganado la partida: la computadora o la usuaria. 
 
-## Entrega
-La evaluación solo se considerará terminada cuando:
-- Esté publicada en GitHub Pages (apuntando a la rama main/master) y esté funcionando.
-- El enlace a GitHub Pages esté en la página página principal del repositorio, en la parte superior, al lado de la descripción.
-- Debéis hacer commits y merges a la rama main/master solo hasta las 11
+## ✅ Final result
+<div id="header" align="center">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/113302094/211371625-88194e0b-125b-4cd2-ad7b-2a8d0db42ad1.png">
+</div>
 
-## Resultado final
 
-> **NOTA:** En el siguiente enlace podéis ver el resultado final de mi versión del juego [**Los anillos del poder**](https://beta.adalab.es/modulo-2-evaluacion-intermedia-marocena26/)
+## ✨ Feedback 
 
-![image](https://user-images.githubusercontent.com/113302094/200696042-beb33c0e-000c-4fa5-a967-57277f4bc7f3.png)
+Any input is most welcome.
 
+Thank you very much! 🤗
