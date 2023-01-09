@@ -4,7 +4,7 @@
 
 In this repository you can find the files generated in the **mid evaluation of Module 2 - JS** within **[Adalab](https://adalab.es/)'s Web Development Bootcamp - Promo Radia**.
 
-The main objective is to develop a **Small battle game** set in Middle-earth "Los anillos de poder". The main **requirement** is that **JavaScript** is used for **development**.
+The main objective is to develop a **Small battle game in Spanish** set in Middle-earth "Los anillos de poder". The main **requirement** is that **JavaScript** is used for **development**.
 
 > **NOTE:** Direct link to the project by clicking on the following **[link](https://marocena26.github.io/los-anillos-de-poder/)**.
 
